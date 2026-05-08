@@ -1,0 +1,281 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#050505;
+  color:white;
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+.app-container{
+  padding:20px;
+  padding-bottom:120px;
+}
+
+.top-bar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.user-box{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.avatar{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid orange;
+  box-shadow:0 0 15px orange;
+}
+
+.notif-btn{
+  width:45px;
+  height:45px;
+  border-radius:15px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(10px);
+}
+
+.wallet-card{
+  position:relative;
+  height:240px;
+  border-radius:35px;
+  overflow:hidden;
+  margin-bottom:25px;
+  box-shadow:0 0 35px rgba(255,140,0,0.35);
+}
+
+.card-bg{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to top,rgba(0,0,0,0.85),rgba(0,0,0,0.1));
+}
+
+.wallet-info{
+  position:absolute;
+  left:25px;
+  bottom:25px;
+  z-index:2;
+}
+
+.balance-title{
+  font-size:13px;
+  color:#ddd;
+  margin-bottom:10px;
+}
+
+.wallet-info h1{
+  font-size:34px;
+  margin-bottom:10px;
+  text-shadow:0 0 15px orange;
+}
+
+.wallet-id{
+  margin-top:12px;
+  background:rgba(255,255,255,0.15);
+  display:inline-block;
+  padding:8px 14px;
+  border-radius:20px;
+  font-size:12px;
+}
+
+.actions-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-bottom:25px;
+}
+
+.action-card{
+  background:rgba(255,255,255,0.05);
+  border-radius:28px;
+  padding:24px;
+  text-align:center;
+  backdrop-filter:blur(15px);
+  transition:0.3s;
+}
+
+.action-card:hover{
+  transform:translateY(-5px);
+}
+
+.action-icon{
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.glow-orange{
+  box-shadow:0 0 20px rgba(255,140,0,0.4);
+}
+
+.glow-blue{
+  box-shadow:0 0 20px rgba(0,170,255,0.4);
+}
+
+.glow-purple{
+  box-shadow:0 0 20px rgba(170,0,255,0.4);
+}
+
+.glow-green{
+  box-shadow:0 0 20px rgba(0,255,140,0.4);
+}
+
+.live-card{
+  background:linear-gradient(135deg,#ff9900,#ff5500);
+  border-radius:30px;
+  padding:22px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+  box-shadow:0 0 30px rgba(255,140,0,0.5);
+}
+
+.pulse-dot{
+  width:16px;
+  height:16px;
+  background:#00ff99;
+  border-radius:50%;
+  animation:pulse 1.2s infinite;
+}
+
+@keyframes pulse{
+
+  0%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+  100%{
+    transform:scale(2.2);
+    opacity:0;
+  }
+
+}
+
+.activities h2{
+  margin-bottom:18px;
+}
+
+.activity-item{
+  background:rgba(255,255,255,0.05);
+  border-radius:24px;
+  padding:18px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:14px;
+}
+
+.activity-item p{
+  color:#999;
+  font-size:12px;
+  margin-top:4px;
+}
+
+.activity-item span{
+  color:#00ff99;
+  font-weight:bold;
+}
+
+.profile-card{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.profile-avatar{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid orange;
+  box-shadow:0 0 25px orange;
+  margin-bottom:15px;
+}
+
+.bottom-nav{
+  position:fixed;
+  bottom:15px;
+  left:15px;
+  right:15px;
+  height:85px;
+  background:rgba(15,15,15,0.95);
+  border-radius:35px;
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  backdrop-filter:blur(15px);
+  box-shadow:0 0 25px rgba(255,140,0,0.25);
+}
+
+.nav-item{
+  text-decoration:none;
+  color:#999;
+  text-align:center;
+  font-size:13px;
+}
+
+.nav-item span{
+  display:block;
+  font-size:24px;
+  margin-bottom:4px;
+}
+
+.active{
+  color:orange;
+}
+
+.bcc-button{
+  width:90px;
+  height:90px;
+  background:linear-gradient(135deg,#ff9900,#ff5500);
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-top:-55px;
+  box-shadow:0 0 40px rgba(255,140,0,0.8);
+  animation:float 2s infinite ease-in-out;
+}
+
+.bcc-button img{
+  width:60px;
+  height:60px;
+  object-fit:contain;
+}
+
+@keyframes float{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-6px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+
+}
